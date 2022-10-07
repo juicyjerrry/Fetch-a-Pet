@@ -1,7 +1,5 @@
 const { Pet } = require('../models');
 
-// TO DO match this data to the data in 
-
 const petdata = [
     {
         name: 'Blossoming Apricot',
