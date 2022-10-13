@@ -87,7 +87,7 @@ function buildHtml() {
         <main>
             <div class=" grid grid-cols-4 gap-2 flex-row pr-2 p-3">`;
 
-    fs.writeFile("../../index2.html", html, function (err) {
+    fs.writeFile("../../index.html", html, function (err) {
         if (err) {
             console.log(err);
         }
@@ -104,7 +104,7 @@ function addHtml(addPet) {
     <img src="./public/images/${petName}.jpg" alt="a corgi" class="rounded-md"/>
         </div>`;
 
-    fs.appendFile("../../index2.html", bodydata, function (err) {
+    fs.appendFile("../../index.html", bodydata, function (err) {
         if (err) {
             console.log(err);
         }
@@ -130,7 +130,7 @@ function endHtml() {
 
 </html>`;
 
-    fs.appendFile("../../index2.html", html, function (err) {
+    fs.appendFile("../../index.html", html, function (err) {
         if (err) {
             console.log(err);
         };
