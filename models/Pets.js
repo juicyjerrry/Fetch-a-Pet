@@ -2,6 +2,7 @@ const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
+//create pet model
 class Pet extends Model {
   checkPassword(loginPw) {
     return bcrypt.compareSync(loginPw, this.password);
@@ -23,6 +24,10 @@ Pet.init(
         breed: {
             type: DataTypes.STRING,
             allowNull: false,
+        },
+        type: {
+          type: DataTypes.STRING,
+          allowNull: false,
         },
         filename: {
             type: DataTypes.STRING,

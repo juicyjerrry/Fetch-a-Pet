@@ -4,50 +4,57 @@ const petdata = [
     {
         name: 'Blossoming Apricot',
         breed: 'Dalmation',
-        filename: 'Dalmation.jpg',
+        type: 'dog',
+        filename: 'dalmation.jpg',
         description:
             'Loves bones and spots and firetrucks.',
-        age: '3'
+        age: '3',
+        // Coordinates: 
     },
     {
-        name: '',
-        breed: '',
-        filename: '',
+        name: 'Sugar Rush',
+        breed: 'Corgi',
+        type: 'dog',
+        filename: 'corgi.jpg',
         description:
-            '',
-        age: ''
+            'Loves to eat candy',
+        age: '1'
     },
     {
-        name: '',
-        breed: '',
-        filename: '',
+        name: 'Ziti',
+        breed: 'Orange Tabby',
+        type: 'cat',
+        filename: 'orangetabby.jpg',
         description:
-            '',
-        age: ''
+            'Loves to bite toes',
+        age: '1'
     },
     {
-        name: '',
-        breed: '',
-        filename: '',
+        name: 'Bernard',
+        breed: 'St. Bernard',
+        type: 'dog',
+        filename: 'stbernard.jpg',
         description:
-            '',
-        age: ''
+            'Gets along well with children',
+        age: '4'
     },
     {
-        name: '',
-        breed: '',
-        filename: '',
+        name: 'Monster Truck',
+        breed: 'Grey Striped Tabby',
+        type: 'cat',
+        filename: 'monstertruck.jpg',
         description:
-            '',
-        age: ''
+            'Does not mess around',
+        age: '6'
     },
     {
-        name: '',
-        breed: '',
-        filename: '',
+        name: 'Geck',
+        breed: 'Bearded Dragon',
+        type: 'other',
+        filename: 'geck.jpg',
         description:
-            '',
-        age: ''
+            'Sleeps most of the day away',
+        age: '2'
     },
   ];
 
