@@ -53,8 +53,8 @@ Pet.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'user',
+    modelName: 'pet',
   }
 );
 
-module.exports = User;
+module.exports = Pet;
