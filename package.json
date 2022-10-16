@@ -1,0 +1,24 @@
+{
+  "name": "project-2-fetch-a-pet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juicyjerrry/Project-2-Fetch-a-Pet.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juicyjerrry/Project-2-Fetch-a-Pet/issues"
+  },
+  "homepage": "https://github.com/juicyjerrry/Project-2-Fetch-a-Pet#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
