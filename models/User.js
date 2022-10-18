@@ -7,15 +7,7 @@ class User extends Model {
     return bcrypt.compareSync(loginPw, this.password);
   }
 }
-class Login extends Component {
-  confirmation(e) {
-    e.preventDefault()
-    const data = {
-      'name': this.loginName.value,
-      'password': this.loginPassword.value,
-    }
-  }
-}
+
 
 const hash = bcrypt.hashSync(user.password, 10);
 user.password = hash;
@@ -40,7 +32,6 @@ router.post("/login", (req, res) => {
     .first()
     .then((user) => {
       if (user && bcrypt.compareSync(password, user.password)) {
-        const token = generateToken(user);
         res
           .status(200)
           .json({
@@ -48,12 +39,11 @@ router.post("/login", (req, res) => {
             first_name: user.first_name,
             last_name: user.last_name,
             email: user.email,
-            token: token,
             user_id: user.id,
           });
       };
     });
-  });
+});
 
 User.init(
   {
