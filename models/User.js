@@ -8,7 +8,6 @@ class User extends Model {
   }
 }
 
-
 const hash = bcrypt.hashSync(user.password, 10);
 user.password = hash;
 
@@ -25,6 +24,7 @@ Users.add(user)
       err,
     });
   });
+
 router.post("/login", (req, res) => {
   const { username, password } = req.body;
 
@@ -48,13 +48,21 @@ router.post("/login", (req, res) => {
 
 User.init(
   {
-    id: {
+    user_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
     username: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    first_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    last_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
