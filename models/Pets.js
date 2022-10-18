@@ -25,10 +25,6 @@ Pet.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        type: {
-          type: DataTypes.STRING,
-          allowNull: false,
-        },
         filename: {
             type: DataTypes.STRING,
             allowNull: false,
