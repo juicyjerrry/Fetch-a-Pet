@@ -1,3 +1,5 @@
+const sequelize = require('../config/connection');
+
 const { User } = require('../models');
 
 const userdata = [
@@ -43,9 +45,8 @@ const userdata = [
         email: 'sexy6@civikli.com',
         password: 'H%4EO*4x6Bip',
     },
-  ];
+];
 
-  
 const seedUsers = () => User.bulkCreate(userdata);
 
 module.exports = seedUsers;

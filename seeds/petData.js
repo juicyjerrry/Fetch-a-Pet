@@ -1,3 +1,5 @@
+const sequelize = require('../config/connection');
+
 const { Pet } = require('../models');
 
 const petdata = [
@@ -8,7 +10,7 @@ const petdata = [
         filename: 'dalmation.jpg',
         description:
             'Loves bones and spots and firetrucks.',
-        age: '3',
+        age: '3'
         // Coordinates: 
     },
     {
@@ -18,7 +20,7 @@ const petdata = [
         filename: 'corgi.jpg',
         description:
             'Loves to eat candy',
-        age: '1'
+        age: '1',
     },
     {
         name: 'Ziti',
@@ -27,7 +29,7 @@ const petdata = [
         filename: 'orangetabby.jpg',
         description:
             'Loves to bite toes',
-        age: '1'
+        age: '1',
     },
     {
         name: 'Bernard',
@@ -36,7 +38,7 @@ const petdata = [
         filename: 'stbernard.jpg',
         description:
             'Gets along well with children',
-        age: '4'
+        age: '4',
     },
     {
         name: 'Monster Truck',
@@ -45,7 +47,7 @@ const petdata = [
         filename: 'monstertruck.jpg',
         description:
             'Does not mess around',
-        age: '6'
+        age: '6',
     },
     {
         name: 'Geck',
@@ -54,11 +56,10 @@ const petdata = [
         filename: 'geck.jpg',
         description:
             'Sleeps most of the day away',
-        age: '2'
+        age: '2',
     },
-  ];
+];
 
-  
 const seedPets = () => Pet.bulkCreate(petdata);
 
 module.exports = seedPets;
