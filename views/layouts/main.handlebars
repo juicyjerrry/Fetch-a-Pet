@@ -2,25 +2,38 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fetch-a-Pet</title>
-  <link rel="stylesheet" href="../../public/css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.2/dist/flowbite.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fb81218133.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../src/style.css">
+    <title>Fetch-a-pet!</title>
 </head>
 
 <body>
   <div class="">
     <header>
-      <h1>
-        <a href="/">Fetch-a-Pet</a>
-      </h1>
-      <nav>
+      <div class="banner flex justify-right text-5xl italic h-0 my-4 mx-3 font-serif"><i><img
+                        src="../../public/images/dogcat.jpg" alt="a dog and a cat" /></i> Fetch-a-Pet <i>
+            </div>
+            <div class="flex justify-center text-green-700 text-2xl font-serif">
+                <i><br>Start the Journey to friendship!</i>
+            </div>
+            <div class="flex justify-left font-bold text-purple-800 italic">Find your new best friend!
+                
+            </div>
+      {{!-- <nav>
         {{#if loggedIn}}
         <button id="logout" class="btn-no-style">logout</button>
         {{else}}
         <a href="/login">login</a>
         {{/if}}
-      </nav>
+      </nav> --}}
     </header>
     <main>
       {{{ body }}}

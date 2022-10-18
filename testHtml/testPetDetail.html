@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.2/dist/flowbite.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fb81218133.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./public/style.css">
+    <title>Fetch-a-pet!</title>
+</head>
+<!-- Header -->
+
+<body>
+    <div class="header-container border border-neutral-900 mx-auto bg-green-100">
+        <header>
+            <div class="banner flex justify-right text-5xl italic h-0 my-4 mx-3 font-serif"><i><img
+                        src="../public/images/dogcat.jpg" alt="a dog and a cat" /></i> Fetch-a-Pet <i>
+            </div>
+            <div class="flex justify-center text-green-700 text-2xl font-serif">
+                <i><br>Start the Journey to friendship!</i>
+            </div>
+        
+            <div class="flex justify-left font-bold text-purple-800 italic">Find your new best friend!</div>
+
+        </header>
+
+    </div>
+    <!-- Main container -->
+    <main>
+        <div class=" grid grid-cols-2 gap-2 pr-2 p-3">
+
+            <div class=" flex-row rounded-md h-50 mx-3 my-5 right-5">
+            <img src="../public/images/corgi.jpg" alt="a corgi" class="rounded-md"
+                        pet-id="1" />
+            </div>
+
+
+            <div>
+                <div class=" h-28"> </div>
+
+                <p id="Name">Name : Sugar Rush</p>
+                <p id="Name">Breed: Corgi</p>
+                <p id="Name">Type : Dog</p>
+                <p id="Name">Age : 1 year(s) old</p>
+                <p id="Name">Description: Loves to eat candy</p>
+
+
+
+                <br><br><br><br><br><br>
+                <button type="submit" id="pet-detail"
+                    class="btn rounded-sm bg-orange-300 border-blue-700 border text-blue-700 hover:text-white hover:bg-blue-800 focus:outline-none focus:ring-blue-300 text-center">Back to previous page</button>
+            </div>
+
+    </main>
+    <script src="./assets/script/script.js"></script>
+    <script src="https://unpkg.com/flowbite@1.5.2/dist/flowbite.js"></script>
+    <script src="./assets/script/googleMaps.js"></script>
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDn0xjfckqD40txkDANthif7G5BFhGir4&libraries=places&callback=initMap&type=park"></script>
+
+</body>
+
+</html>
