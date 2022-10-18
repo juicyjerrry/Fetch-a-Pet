@@ -1,15 +1,11 @@
 const { Model, DataTypes } = require('sequelize');
-const bcrypt = require('bcrypt');
+// const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
 //create pet model
-class Pet extends Model {
-  checkPassword(loginPw) {
-    return bcrypt.compareSync(loginPw, this.password);
-  }
-}
+class Pets extends Model {}
 
-Pet.init(
+Pets.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -43,12 +39,6 @@ Pet.init(
         },
     },
   {
-    hooks: {
-      beforeCreate: async (newUserData) => {
-        newUserData.password = await bcrypt.hash(newUserData.password, 10);
-        return newUserData;
-      },
-    },
     sequelize,
     timestamps: false,
     freezeTableName: true,
@@ -57,4 +47,4 @@ Pet.init(
   }
 );
 
-module.exports = Pet;
+module.exports = Pets;
