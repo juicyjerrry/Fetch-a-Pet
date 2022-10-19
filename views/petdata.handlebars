@@ -6,7 +6,7 @@
 <div class=" grid grid-cols-4 gap-2 flex-row pr-2 p-3">
     {{#each petData as |petData|}}
     <div class=" flex-row rounded-md h-50 mx-3 my-5 right-5">
-        <button type="button"> </button><img src="./public/images/{{petData.filename}}" alt="{{petData.filename}}" class="rounded-md" id="petid" onclick="getpetdetail('{{petData.id}}')"/>
+        <button type="button"> </button><img src="/images/{{petData.filename}}" alt="{{petData.filename}}" class="rounded-md" id="petid" onclick="getpetdetail('{{petData.id}}')"/>
         </button>
     </div>
 
