@@ -12,7 +12,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/fb81218133.js" crossorigin="anonymous"></script>
   <script src="handlebars-v5.3.5.js"></script>
-  <link rel="stylesheet" href="../src/style.css">
+  {{!-- <link rel="stylesheet" href="../../src/style.css"> --}}
+  <link rel="stylesheet" href="/public/style.css">
   <title>Fetch-a-pet!</title>
 </head>
 
@@ -20,7 +21,7 @@
   <div class="header-container border border-neutral-900 mx-auto bg-green-100">
     <header>
       <div class="banner flex justify-right text-5xl italic h-0 my-4 mx-3 font-serif"><i><img
-            src="../../public/images/dogcat.jpg" alt="a dog and a cat" /></i> Fetch-a-Pet <i>
+            src="/images/dogcat.jpg" alt="a dog and a cat"></i> Fetch-a-Pet <i>
       </div>
       <div class="flex justify-center text-green-700 text-2xl font-serif">
         <i><br>Start the Journey to friendship!</i>
@@ -43,8 +44,10 @@
     <main>
       {{{ body }}}
     </main>
-
-    <footer>
+<br>
+<br>
+    <footer class="text-align text-center">
+      
       Thanks for visiting!
     </footer>
   </div>
