@@ -2,7 +2,7 @@ const router = require('express').Router();
 const Pet   = require('../../models/Pets');
 
 // get pets serialized data
-router.get('petid', async (req, res) => {
+router.get('/:petid', async (req, res) => {
     try {
       //get all pet data , need only filename to get the pet image file
       const petData = (await Pet.findByPk(req.params.petid)).get({plain: true});

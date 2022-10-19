@@ -5,7 +5,7 @@ const Pet   = require('../../models/Pets');
 router.get('/', async (req, res) => {
     try {
       //get all pet data , need only filename to get the pet image file
-      const petData = (await Pet.findAll()).get({plain: true});
+      const petData = await Pet.findAll().get({plain: true});
 
       res.render('petdata', petData);
     } catch (err) {
