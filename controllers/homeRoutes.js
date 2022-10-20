@@ -46,7 +46,7 @@ router.get('/pets/:id', async (req, res) => {
     const pets = petData.get({ plain: true });
 
     res.render('petdetails', {
-      ...pets,
+      pets,
       logged_in: req.session.logged_in
     });
   } catch (err) {
