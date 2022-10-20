@@ -46,7 +46,7 @@ router.get('/pets/:id', async (req, res) => {
     const pets = petData.get({ plain: true });
 
     res.render('petdetails', {
-      petData: pets,
+      ...pets,
       logged_in: req.session.logged_in
     });
   } catch (err) {
@@ -61,15 +61,6 @@ router.get('/login', (req, res) => {
   }
 
   res.render('login');
-});
-
-router.get('/signup', (req, res) => {
-  if (req.session.logged_in) {
-    res.redirect('/');
-    return;
-  }
-
-  res.render('signup');
 });
 
 module.exports = router;
