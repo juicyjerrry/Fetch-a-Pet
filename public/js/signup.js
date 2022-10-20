@@ -1,32 +1,3 @@
-const loginFormHandler = async (event) => {
-  event.preventDefault();
-  
-    const email = document.querySelector('#email-login').value.trim();
-    const password = document.querySelector('#password-login').value.trim();
-  
-    if (email && password) {
-
-        //what should this be pointing to?
-      const response = await fetch('/api/userRoutes/login', {
-        method: 'get',
-        body: JSON.stringify({ 
-            email, 
-            password
-         }),
-        headers: { 'Content-Type': 'application/json' },
-      });
-  
-      if (response.ok) {
-        document.location.replace('/api/pets');
-      } else {
-        alert('Failed to log in');
-      }
-    }
-  };
- 
-  
-////////////////////////////////////////////////////////////////
-
 const signupFormHandler = async (event) => {
     event.preventDefault();
 
@@ -58,5 +29,4 @@ if (username && email && password) {
 }
 }
 //changed the id these are pointing at so that they correspond with button id on homepage & main
-document.querySelector('#login').addEventListener('submit', loginFormHandler);
 document.querySelector('#signup-btn').addEventListener('submit', signupFormHandler);
