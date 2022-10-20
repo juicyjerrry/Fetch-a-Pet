@@ -8,7 +8,7 @@ const loginFormHandler = async (event) => {
 
         //what should this be pointing to?
       const response = await fetch('api/users/login', {
-        method: 'POST',
+        method: 'get',
         body: JSON.stringify({ 
             email, 
             password
@@ -17,12 +17,13 @@ const loginFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/');
+        document.location.replace('/api/pets');
       } else {
         alert('Failed to log in');
       }
     }
   };
+ 
   
 ////////////////////////////////////////////////////////////////
 

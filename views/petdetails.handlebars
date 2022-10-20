@@ -5,21 +5,21 @@
 
 <div class=" grid grid-cols-2 gap-2 flex-row pr-2 p-3">
     <div class=" flex-row rounded-md h-50 mx-3 my-5 right-5">
-        <img src="/images/{{filename}}" alt="{{filename}}" class="rounded-md" pet-id="{{id}}" />
+        <img src="/images/{{petData.filename}}" alt="{{petData.filename}}" class="rounded-md" pet-id="{{petData.id}}" />
 
     </div>
     <div>
-        <div class=" h-28"> </div>
-        <div class="body-container bg-green-100">
+        <div class=" h-12"> </div>
+        <div class="h-32 body-container bg-green-100">
 
-            <p id="Name">Name : {{name}}</p>
-            <p id="Name">Breed: {{breed}}</p>
-            <p id="Name">Type : {{type}}</p>
-            <p id="Name">Age : {{age}} year(s) old</p>
-            <p id="Name">Description: {{description}}</p>
+            <p id="Name">Name : {{petData.name}}</p>
+            <p id="Name">Breed: {{petData.breed}}</p>
+            <p id="Name">Type : {{petData.type}}</p>
+            <p id="Name">Age : {{petData.age}} year(s) old</p>
+            <p id="Name">Description: {{petData.description}}</p>
         </div>
-        <br><br><br><br><br><br>
-        <button type="submit" id="pet-data"
+        <br><br><br><br>
+        <button type="submit" id="back-to-pet" onclick="getpetdata"
             class="btn rounded-sm bg-orange-300 border-blue-700 border text-blue-700 hover:text-white hover:bg-blue-800 focus:outline-none focus:ring-blue-300 text-center">Back
             to previous
             page</button>
