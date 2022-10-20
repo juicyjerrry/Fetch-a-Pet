@@ -3,6 +3,7 @@ const seedUserData = require('./userData');
 
  
 const sequelize = require('../config/connection');
+const { User } = require('../models');
 
 const seedAll = async () => {
   
@@ -14,7 +15,14 @@ const seedAll = async () => {
 
   await seedUserData();
   console.log('\n----- USERS SEEDED -----\n');
-
+  await User.create(    {
+    "username": "test",
+    "first_name": "test",
+    "last_name": "test",
+    "email": "test@test.com",
+    "password": "test123456"
+}
+)
 
   process.exit(0);
 };

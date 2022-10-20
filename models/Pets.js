@@ -23,7 +23,7 @@ Pets.init(
         },
         filename: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
         },
         description: {
             type: DataTypes.STRING,
