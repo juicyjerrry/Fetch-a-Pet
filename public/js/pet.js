@@ -6,7 +6,7 @@ const newFormHandler = async (event) => {
   }
   
       const response = await fetch('/api/petdetailRoutes', {
-        method: 'GET',
+        method: 'get',
         body: JSON.stringify({ 
             petID, 
         }),
@@ -23,3 +23,6 @@ const newFormHandler = async (event) => {
 
 document.querySelector('.new-pet-form')
   .addEventListener('submit', newFormHandler);
+
+
+  
