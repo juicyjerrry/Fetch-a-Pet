@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const {Pet} = require('../models');
+const { Pet } = require('../models');
 const withAuth = require('../utils/auth');
 
 //write the html file

@@ -3,11 +3,11 @@ const { User, Pets } = require('../models');
 const withAuth = require('../utils/auth');
 
 //adding from unit 23
-router.get('/', withAuth, async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const userData = await User.findAll({
       attributes: { exclude: ['password'] },
-      order: [['name', 'ASC']],
+      order: [['email', 'ASC']],
     });
 
     const users = userData.map((project) => project.get({ plain: true }));
@@ -23,41 +23,40 @@ router.get('/', withAuth, async (req, res) => {
 
 //end of add
 
-// router.get('/', async (req, res) => {
-//   try {
-//     const petData = await Pets.findAll({
-//     });
+router.get('/pets', async (req, res) => {
+  try {
+    const petData = await Pets.findAll({
+    });
 
-//     const Pets = petData.map((Pets) => Pets.get({ plain: true }));
+    const pets = petData.map((pet) => pet.get({ plain: true }));
 
-//     res.render('homepage', { 
-//       Pets, 
-//       logged_in: req.session.logged_in 
-//     });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
+    res.render('petdata', { 
+      petData: pets, 
+      logged_in: req.session.logged_in 
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
-// router.get('/pets/:id', async (req, res) => {
-//   try {
-//     const petData = await Pets.findByPk(req.params.id, {
-//     });
+router.get('/pets/:id', async (req, res) => {
+  try {
+    const petData = await Pets.findByPk(req.params.id);
 
-//     const Pets = petData.get({ plain: true });
+    const pets = petData.get({ plain: true });
 
-//     res.render('petdetails', {
-//       ...Pets,
-//       logged_in: req.session.logged_in
-//     });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
+    res.render('petdetails', {
+      ...pets,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
-    res.redirect('/homepage');
+    res.redirect('/');
     return;
   }
 

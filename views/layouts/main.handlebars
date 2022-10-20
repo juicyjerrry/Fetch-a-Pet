@@ -11,9 +11,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/fb81218133.js" crossorigin="anonymous"></script>
-  <script src="handlebars-v5.3.5.js"></script>
   {{!-- <link rel="stylesheet" href="../../src/style.css"> --}}
-  <link rel="stylesheet" href="/public/style.css">
+  <link rel="stylesheet" href="/css/style.css">
   <title>Fetch-a-pet!</title>
 </head>
 
@@ -30,15 +29,6 @@
 
       </div>
   </div>
-      
-        {{#if loggedIn}}
-        <nav>
-          <button id="logout" class="btn-no-style">logout</button>
-        {{else}}
-        <a href="/login.js">login</a>
-        </nav> 
-        {{/if}}
-     
 
     </header>
     <main>
@@ -54,6 +44,7 @@
 
   {{#if loggedIn}}
   <script src="../../public/js/logout.js"></script>
+
   {{/if}}
 </body>
 
