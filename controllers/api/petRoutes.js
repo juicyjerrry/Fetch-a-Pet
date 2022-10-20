@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const Pet   = require('../../models/Pets');
 
-router.post('/', withAuth, async (req, res) => {
+router.post('/', async (req, res) => {
   try {
     const newPet = await Pet.create(req.body);
 

@@ -17,7 +17,7 @@ const loginFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/');
+        document.location.replace('/pets');
       } else {
         alert('Failed to log in');
       }
