@@ -1,7 +1,5 @@
-<div class="bg-cover bg-center" style="background-image: url('/images/geck.jpg')">
-    <div class="body-container bg-green-100 text-center relative top-1 w-1/3 background-image h-96">
-        {{!-- <div class="text-center relative w-3/5">
-            <div class=" top-0 h-14"></div> --}}
+<div class="bg-cover bg-center">
+    <div class="text-center relative top-1 w-1/3 background-image h-96">
             <div class="row mx-auto d-flex align-items-center min-vh-100">
                 <div class="col-md-6 col-md-offset-3 mx-auto" id="sign-up">
                     <br>
@@ -10,11 +8,11 @@
                     <form class="signup">
                         <div class="form-group">
                             <label for="InputFirstName">First Name</label>
-                            <input type="email" class="form-control" id="firstname-signup" placeholder="First Name">
+                            <input type="text" class="form-control" id="firstname-signup" placeholder="First Name">
                         </div>
                         <div class="form-group">
                             <label for="InputLastName">Last Name.</label>
-                            <input type="email" class="form-control" id="lastname-signup" placeholder="Last Name">
+                            <input type="text" class="form-control" id="lastname-signup" placeholder="Last Name">
                         </div>
                         <div class="form-group">
                             <label for="InputEmail">Email.........</label>
@@ -30,7 +28,7 @@
                             Up</button>
                     </form>
                     <br />
-                    <p>Returning User? <button type="submit" id="login"
+                    <p>Returning User? <button type="submit" id="login" onclick="document.location.replace('/login')"
                             class="btn rounded-sm border-blue-700 border text-blue-700 hover:text-white hover:bg-blue-800 focus:outline-none focus:ring-blue-300 text-center">Log
                             In
                         </button> </p>
