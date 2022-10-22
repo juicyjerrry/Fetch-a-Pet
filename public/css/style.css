@@ -558,7 +558,7 @@ video {
 }
 
 body {
-  background-image: url("/images/geck.jpg");
+  background-image: url("/images/background.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -568,13 +568,13 @@ body {
 
 #sign-up {
   border-radius: 2em;
-  background: rgba(179, 247, 175, 0.75);
+  background: rgb(211, 237, 209);
   color: rgb(0, 0, 0);
 }
 
 #log-in {
   border-radius: 2em;
-  background: rgba(179, 247, 175, 0.75);
+  background: rgba(211, 237, 209);
   color: rgb(0, 0, 0);
 }
 
@@ -602,3 +602,4 @@ body {
   background: rgb(150,135,112);
   background: linear-gradient(0deg, rgba(150,135,112,0.9948354341736695) 0%, rgba(255,247,243,1) 100%);
 }
+

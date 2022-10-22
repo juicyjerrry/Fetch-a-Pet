@@ -1,7 +1,10 @@
 <div class="text-center relative w-3/5">
-    <div class=" top-0 h-14"></div>
+    <div class="top-0 h-14"></div>
     <div class="row mx-auto d-flex align-items-center min-vh-100"></div>
+
 </div>
+<button id="logout" onclick="document.location.replace('/login')"
+    class="btn justify-items-end rounded-sm border-white-700 border bg-white text-blue-700 hover:text-white hover:bg-blue-800 focus:outline-none focus:ring-blue-300 text-center text-xl border-4">logout</button>
 
 <div class=" grid grid-cols-4 gap-2 flex-row pr-2 p-3">
     {{#each petData}}
