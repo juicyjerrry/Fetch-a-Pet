@@ -1,10 +1,14 @@
 const router = require('express').Router();
-const Pet   = require('../../models/Pets');
+const Pets = require('../../models/Pets');
 const withAuth = require('../../utils/auth');
 
-router.post('/', withAuth, async (req, res) => {
+//need withAuth
+router.post('/', async (req, res) => {
   try {
-    const newPet = await Pet.create(req.body);
+    const newPet = await Pets.create({
+      ...req.body,
+      user_id: req.session.user_id,
+    });
 
     res.status(200).json(newPet);
   } catch (err) {

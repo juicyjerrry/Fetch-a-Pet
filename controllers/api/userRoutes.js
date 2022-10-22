@@ -16,10 +16,13 @@ router.post('/', async (req, res) => {
   }
 });
 
+
 router.get('/login', async (req, res) => {
   try {
     const userData = await User.findOne({ where: { email: req.body.email } });
+    //checking for UserData
     console.log(userData)
+
     if (!userData) {
       res
         .status(400)
@@ -28,7 +31,9 @@ router.get('/login', async (req, res) => {
     }
 
     const validPassword = await userData.checkPassword(req.body.password);
+    //checking for valid PW
     console.log(validPassword)
+
     if (!validPassword) {
       res
         .status(400)
