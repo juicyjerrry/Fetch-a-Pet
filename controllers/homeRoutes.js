@@ -72,4 +72,13 @@ router.get('/signup', (req, res) => {
   res.render('signup');
 });
 
+router.get('/addpet', (req, res) =>{
+  if (req.session.logged_in) {
+    res.redirect('/');
+    return;
+  }
+
+  res.render('addpet');
+})
+
 module.exports = router;
