@@ -1,18 +1,18 @@
 const signupFormHandler = async (event) => {
     event.preventDefault();
 
-// const username = document.querySelector('#username-login').value.trim();
-const first_name = document.querySelector('#first_name').value.trim();
-const last_name = document.querySelector('#last_name').value.trim();
-const email = document.querySelector('#email-login').value.trim();
-const password = document.querySelector('#password-login').value.trim();
+const username = document.querySelector('#username-signup').value.trim();
+const first_name = document.querySelector('#firstname-signup').value.trim();
+const last_name = document.querySelector('#lastname-signup').value.trim();
+const email = document.querySelector('#email-signup').value.trim();
+const password = document.querySelector('#password-signup').value.trim();
 
 if (email && password) {
-    //to do: sign up route
-    const response = await fetch('/', {
-        method: 'post',
+
+    const response = await fetch('api/users/signup', {
+        method: 'POST',
         body: JSON.stringify({
-          //username,
+          username,
           first_name,
           last_name,
           email,
@@ -28,5 +28,5 @@ if (email && password) {
       }
 }
 }
-//changed the id these are pointing at so that they correspond with button id on homepage & main
-document.querySelector('#signup-btn').addEventListener('submit', signupFormHandler);
+//signup-form pointing at form class in signuo.handlebar
+document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);

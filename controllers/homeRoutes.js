@@ -73,7 +73,7 @@ router.get('/signup', (req, res) => {
 });
 
 router.get('/addpet', (req, res) =>{
-  if (req.session.logged_in) {
+  if (!req.session.logged_in) {
     res.redirect('/');
     return;
   }
