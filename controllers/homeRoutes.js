@@ -78,7 +78,7 @@ router.get('/addpet', (req, res) =>{
     return;
   }
 
-  res.redirect('/pets');
+  res.render('addpet');
 })
 
 module.exports = router;

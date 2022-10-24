@@ -6,17 +6,16 @@
 {{#if logged_in}}
 <button id="logout" onclick="document.location.replace('/login')"
     class="btn justify-items-end rounded-sm bg-orange-300 text-blue-700 hover:text-white hover:bg-blue-800 focus:outline-none focus:ring-blue-300 text-center text-xl border-4 border-red-700">logout</button>
+{{/if}}
 <button id="addpet-btn" type="submit" onclick="document.location.replace('/addpet')"
     class="btn rounded-sm bg-orange-300 border-red-700 text-blue-700 hover:text-white hover:bg-blue-800 focus:outline-none focus:ring-blue-300 text-center text-xl border-4">Add a pet</button>
 
 <div class=" grid grid-cols-4 gap-2 flex-row pr-2 p-3">
     {{#each petData}}
     <div class=" flex-row rounded-md h-50 mx-3 my-5 right-5 text-4xl text-red-700 border bg-slate-300">
-        <a href = "/pets/{{id}}"><img src="https://res.cloudinary.com/dmor2scof/image/upload/v1666459607/petimages/{{filename}}" alt="{{filename}}" class="rounded-md" id="petid" onclick="getpetdetail('{{id}}')"/>
+        <a href = "/pets/{{id}}"><img src="https://res.cloudinary.com/dmor2scof/image/upload/v1666459607/petimages/{{filename}}" alt="{{filename}}" class="rounded-md" id="petid" onclick="getpetdetail('{{id}}')"/></a>
         <h1 class="btn justify-items-end rounded-sm border-blue-700 bg-white text-blue-700 hover:text-white hover:bg-blue-800 focus:outline-none focus:ring-blue-300 text-center text-xl border-4">{{name}}</h1>
-        </a>
     </div>
-
     {{/each}}
 
 </div>
