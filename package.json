@@ -28,6 +28,7 @@
     "express-handlebars": "^5.3.5",
     "express-session": "^1.17.3",
     "mysql2": "^2.3.3",
+    "node.js": "^0.0.1-security",
     "npm-watch": "^0.11.0",
     "sequelize": "^6.25.3"
   },
