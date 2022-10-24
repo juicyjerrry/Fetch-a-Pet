@@ -11,14 +11,14 @@ const newPetHandler = async (event) => {
 
   if (name && breed && type && filename && description && age) {
 
-    const response = await fetch('/api/pets/addpet', 
-    {
-      method: 'POST',
-      body: JSON.stringify({name, breed, type, filename, description, age}),
-      headers: {
-        'Content-Type': 'application/json',
-      }, 
-    });
+    const response = await fetch('/api/pets/addpet',
+      {
+        method: 'POST',
+        body: JSON.stringify({ name, breed, type, filename, description, age }),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
 
     if (response.ok) {
       alert('Pet added successfully!')
@@ -29,8 +29,8 @@ const newPetHandler = async (event) => {
   }
 };
 
-document.querySelector('.addpet-form')
+
+document
+  .querySelector('.addpet-form')
   .addEventListener('submit', newPetHandler);
 
-
-  
