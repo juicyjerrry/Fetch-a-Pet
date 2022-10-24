@@ -4,28 +4,33 @@
 </div>
 
 <button id="logout" onclick="document.location.replace('/login')"
-    class="btn justify-items-end rounded-sm border-white-700 border bg-white text-blue-700 hover:text-white hover:bg-blue-800 focus:outline-none focus:ring-blue-300 text-center text-xl border-4">logout</button>
+    class="btn justify-items-end rounded-sm border-red-700 bg-orange-300 text-blue-700 hover:text-white hover:bg-blue-800 focus:outline-none focus:ring-blue-300 text-center text-xl border-4">logout</button>
 
 <button type="submit" id="back-to-pet" onclick="document.location.replace('/pets')"
-    class="btn justify-items-end rounded-sm border-white-700 border bg-white text-blue-700 hover:text-white hover:bg-blue-800 focus:outline-none focus:ring-blue-300 text-center text-xl border-4">Back to previous page</button>
+    class="btn justify-items-end rounded-sm border-red-700 bg-orange-300 text-blue-700 hover:text-white hover:bg-blue-800 focus:outline-none focus:ring-blue-300 text-center text-xl border-4">Back to previous page</button>
 
 <div class=" grid grid-cols-2 gap-2 flex-row pr-2 p-3">
     <div class=" flex-row rounded-md h-50 mx-3 my-5 right-5">
-        <img src="/images/{{petData.filename}}" alt="{{petData.filename}}" class="rounded-md" pet-id="{{petData.id}}" />
+        <img src="https://res.cloudinary.com/dmor2scof/image/upload/v1666459607/petimages/{{petData.filename}}" alt="{{petData.filename}}" class="rounded-md" pet-id="{{petData.id}}" />
 
     </div>
     <div>
-        <div class=" h-12"> </div>
+        <div class="h-12"> </div>
         <div class="h-32 body-container bg-green-100">
 
             <p id="Name">Name : {{petData.name}}</p>
-            <p id="Name">Breed: {{petData.breed}}</p>
-            <p id="Name">Type : {{petData.type}}</p>
-            <p id="Name">Age : {{petData.age}} year(s) old</p>
-            <p id="Name">Description: {{petData.description}}</p>
+            <p id="Breed">Breed: {{petData.breed}}</p>
+            <p id="Type">Type : {{petData.type}}</p>
+            <p id="Age">Age : {{petData.age}} year(s) old</p>
+            <p id="Description">Description: {{petData.description}}</p>
         </div>
         <br><br><br><br>
     </div>
+    <div class="petdelete">
+    <button type="delete" data-id="{{petData.id}}"
+    class="btn justify-items-end rounded-sm w-25 border-red-700 bg-orange-300 text-blue-700 hover:text-white hover:bg-blue-800 focus:outline-none focus:ring-blue-300 text-center text-xl border-4">Delete this pet? {{petData.id}}</button>
+    </div>
+
 </div>
 
-<script type="text/javascript" src="/js/pet.js"></script>
+<script type="text/javascript" src="/js/deletepet.js"></script>
