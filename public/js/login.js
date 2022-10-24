@@ -7,9 +7,10 @@ const loginFormHandler = async (event) => {
     if (email && password) {
 
         //what should this be pointing to?
-      const response = await fetch('/login', {
+      const response = await fetch('/api/users/login', {
       // const response = await fetch('api/userRoutes/login', {
-        method: 'get',
+        method: 'POST',
+        body: JSON.stringify({ email, password }),
         headers: { 'Content-Type': 'application/json' },
       });
   
@@ -55,5 +56,5 @@ const loginFormHandler = async (event) => {
 // }
 // }
 //changed the id these are pointing at so that they correspond with button id on homepage & main
-document.querySelector('#login').addEventListener('submit', loginFormHandler);
+document.querySelector('#login').addEventListener('click', loginFormHandler);
 // document.querySelector('#signup-btn').addEventListener('submit', signupFormHandler);
