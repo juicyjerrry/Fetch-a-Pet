@@ -76,7 +76,8 @@ Used CSS/tailwind CSS for styling,
 Used handlebars for the views of the webpage. 
 The routes interface with the database to get the data and render the data to the handlebar views, which send the data to the browser
 
-## Link to application:
+## Link to application: 
+	https://juicy-fetch-a-pet.herokuapp.com/
 
 ## Link to GitHub:
 	https://github.com/juicyjerrry/Project-2-Fetch-a-Pet
