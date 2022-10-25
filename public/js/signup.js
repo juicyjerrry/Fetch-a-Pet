@@ -20,13 +20,13 @@ if (email && password) {
         }),
         headers: { 'Content-Type': 'application/json' }
       });
-  
+  //once sign up is sucessfull revert back to login screen to save session ids
       if (response.ok) {
-        document.location.replace('/pets');
+        document.location.replace('/login');
       } else {
         alert('Failed to sign up');
       }
 }
 }
-//signup-form pointing at form class in signuo.handlebar
+//signup-form pointing at form class in signup.handlebar
 document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
