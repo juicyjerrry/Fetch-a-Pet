@@ -4,13 +4,7 @@ const withAuth = require('../../utils/auth');
 
 router.post('/addpet', withAuth, async (req, res) => {
   try {
-    console.log("checkpoint 1")
-    const newPet = await Pet.create({ 
-      ...req.body,
-      user_id: req.session.user_id,
-     });
-     console.log("checkpoint 2")
-
+    const newPet = await Pet.create(req.body);
     res.status(200).json(newPet);
   } catch (err) {
     res.status(400).json(err);
