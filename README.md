@@ -89,7 +89,7 @@ The routes interface with the database to get the data and render the data to th
 	https://github.com/juicyjerrry/Project-2-Fetch-a-Pet
 ```
 ## Screenshot
-<img width="1440" alt="Screen Shot" src="https://user-images.githubusercontent.com/106643330/196308156-902b52b9-f7a2-4fb2-ac2a-bf1481aebd31.png">
+<img width="1440" alt="Screen Shot" src="public/images/prj2screenshot.jpg">
 
 ## Video of deployed application
 ![Gif of site](../Project-2-Fetch-a-Pet/assets/Fetch-a-pet!.gif)
