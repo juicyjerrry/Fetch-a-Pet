@@ -43,9 +43,10 @@ WHEN I go back to the homepage and click the logout button
 THEN I am logged out and  brought back to the login page
 
 The motivation to build this website was to consolidate what we've learned so far in the class
+```
 
 ## Installation
-
+```
 Used Mysql
 Used Sequelize ORM
 
@@ -65,26 +66,32 @@ Use Handlebars.js: npm i handlebars
 Use mysql 2: npm i mysql2
 Install tailwind: npm install -D tailwindcss postcss autoprefixer 
 Install tailwind: npx tailwindcss init 
+```
 
 ## Usage
+```
 This Website will be used to find available pets for adoption
-
+```
 ## Features
+```
 Used Javascript, for the login/logout and signup pages and routes, for the database models, for authentication of login/logout , and seeding the data,.
 Used CSS/tailwind CSS for styling,
  Used mysql to hold the user and pet data models in the database, 
 Used handlebars for the views of the webpage. 
 The routes interface with the database to get the data and render the data to the handlebar views, which send the data to the browser
-
+```
 ## Link to application: 
+```
 	https://juicy-fetch-a-pet.herokuapp.com/
-
+```
 ## Link to GitHub:
+```
 	https://github.com/juicyjerrry/Project-2-Fetch-a-Pet
-
+```
 ## Screenshot
 <img width="1440" alt="Screen Shot" src="https://user-images.githubusercontent.com/106643330/196308156-902b52b9-f7a2-4fb2-ac2a-bf1481aebd31.png">
 
 ## Video of deployed application
+![Gif of site](../Project-2-Fetch-a-Pet/assets/Fetch-a-pet!.gif)
 
 
